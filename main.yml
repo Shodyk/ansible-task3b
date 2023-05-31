@@ -1,10 +1,11 @@
 - hosts: all
   tasks:
   - name: Install OpenJDK
-    yum:
+    package:
       name:
       - java-1.8.0-openjdk
       - maven
+      - git
 
   - name: Clone Repo
     git:
